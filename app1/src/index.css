@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: false;
+}
+
+@layer components {
+  * {
+    color: #fff;
+    font-family: "Tajawal", sans-serif;
+  }
+
+  .navbar ul li a.active {
+    background-color: #ff6100 !important;
+    color: #fff !important;
+  }
+
+  .navbar .navbar-end ul li a.active {
+    background-color: #2e1e14 !important;
+    color: #ff6100 !important;
+    border: 1px solid #ff6100 !important;
+  }
+
+  .navbar {
+    color: #000
+  }
+
+  .container {
+    @apply w-[90%] mx-auto
+  }
+
+  .row {
+    @apply flex flex-wrap
+  }
+
+  .btn {
+    @apply bg-red-300 text-white p-2 rounded-3xl hover:bg-red-400 transition-all duration-300 my-3
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .berforeLine::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(to right, #ff6b00, #f1af00);
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+  }
+
+  .orgdiv::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff6b00;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 #ff6a00b4;
+    }
+
+    100% {
+      box-shadow: 0 0 0 12px transparent;
+    }
+  }
+
+  /* .btnLinks NavLink.active{
+    background-color: #f74d00;
+  } */
+
+}
